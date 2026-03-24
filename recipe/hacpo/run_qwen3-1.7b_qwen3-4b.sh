@@ -1,7 +1,8 @@
 set -x
 
-math_train_path="${HOME}/data/math/train.parquet"
-math500_test_path="${HOME}/data/math/math500_test.parquet"
+REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+math_train_path="${REPO_ROOT}/data/train.parquet"
+math500_test_path="${REPO_ROOT}/data/math500_test.parquet"
 
 train_files="['$math_train_path']"
 test_files="['$math500_test_path']"

@@ -51,8 +51,8 @@
 - `mydocs/hacpo_impl.md`
   - HACPO 的实现解构、关键不变量和排查顺序。
 - 目标数据产物路径约定：
-  - `~/data/math/train.parquet`
-  - `~/data/math/math500_test.parquet`
+  - `data/train.parquet`
+  - `data/math500_test.parquet`
 
 ## 四、协作与提交约束（简版）
 

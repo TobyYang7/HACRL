@@ -16,15 +16,15 @@ conda activate verl
 
 目标数据路径：
 
-- `~/data/math/train.parquet`
-- `~/data/math/math500_test.parquet`
+- `data/train.parquet`
+- `data/math500_test.parquet`
 
 推荐流程：
 
 ```bash
 conda activate verl
-PYTHONPATH=. python examples/data_preprocess/math_dataset.py --local_dir ~/data/math
-PYTHONPATH=. python examples/data_preprocess/math500.py --local_dir ~/data/math
+PYTHONPATH=. python examples/data_preprocess/math_dataset.py --local_dir ./data
+PYTHONPATH=. python examples/data_preprocess/math500.py --local_dir ./data
 ```
 
 说明：
@@ -38,8 +38,8 @@ PYTHONPATH=. python examples/data_preprocess/math500.py --local_dir ~/data/math
 
 `recipe/hacpo/run_qwen3-1.7b_qwen3-4b.sh` 中若使用占位路径（如 `Your own path`），应替换为：
 
-- `math_train_path=~/data/math/train.parquet`
-- `math500_test_path=~/data/math/math500_test.parquet`
+- `math_train_path=${REPO_ROOT}/data/train.parquet`
+- `math500_test_path=${REPO_ROOT}/data/math500_test.parquet`
 
 ## 4. 文档与知识源约定
 

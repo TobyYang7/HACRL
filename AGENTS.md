@@ -88,15 +88,15 @@ Commit message 必须严格遵循：
 
 数据路径约定：
 
-- 训练集：`~/data/math/train.parquet`
-- 验证集：`~/data/math/math500_test.parquet`
+- 训练集：`data/train.parquet`
+- 验证集：`data/math500_test.parquet`
 
 数据预处理默认命令：
 
 ```bash
 conda activate verl
-PYTHONPATH=. python examples/data_preprocess/math_dataset.py --local_dir ~/data/math
-PYTHONPATH=. python examples/data_preprocess/math500.py --local_dir ~/data/math
+PYTHONPATH=. python examples/data_preprocess/math_dataset.py --local_dir ./data
+PYTHONPATH=. python examples/data_preprocess/math500.py --local_dir ./data
 ```
 
 若脚本中存在占位路径（如 `Your own path`），应替换为上述路径或在文档中明确说明实际路径。
