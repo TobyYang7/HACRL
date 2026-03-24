@@ -130,6 +130,7 @@ ENV/
 logs
 log
 outputs
+.worktrees/
 tools
 hf
 some_small_tools

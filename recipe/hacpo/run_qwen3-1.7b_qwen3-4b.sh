@@ -1,7 +1,7 @@
 set -x
 
-math_train_path="Your own path"
-math500_test_path="Your own path"
+math_train_path="${HOME}/data/math/train.parquet"
+math500_test_path="${HOME}/data/math/math500_test.parquet"
 
 train_files="['$math_train_path']"
 test_files="['$math500_test_path']"
@@ -19,6 +19,7 @@ offload=True
 
 project_name="hacpo"
 experiment_name="qwen3_1.7b_4b"
+default_local_dir="${HOME}/checkpoints/${project_name}/${experiment_name}"
 
 
 main_model=Qwen/Qwen3-1.7B-Base
@@ -78,4 +79,5 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=3 \
     trainer.test_freq=3 \
     trainer.total_epochs=1 \
-    trainer.default_local_dir='Your Path'$@
+    trainer.default_local_dir="${default_local_dir}" \
+    "$@"
