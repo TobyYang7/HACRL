@@ -140,3 +140,4 @@ hzx_experiment
 setup.py
 set_verl_envs.sh
 tensorboard_log
+.worktrees/
